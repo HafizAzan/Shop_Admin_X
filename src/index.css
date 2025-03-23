@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #121317;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  cursor: auto;
+  transition: all 400ms ease;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.bar:nth-child(2) {
+  height: 35px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+.custom-dropdown .ant-dropdown-menu {
+  @apply w-[150px] bg-[#24262d] text-white !important;
+}
+
+.custom-dropdown .ant-dropdown-menu-item {
+  @apply text-white hover:bg-[#0000002d] !important;
+}
+
+.custom-input,
+.custom-select .ant-select-selector {
+  @apply text-white transition-all bg-[#24262d] w-full focus:bg-transparent hover:bg-transparent py-[10px] !important;
+}
+
+.custom-search-input .ant-input-group > .ant-input {
+  @apply text-white transition-all bg-[#24262d] w-full focus:bg-transparent hover:bg-transparent !important;
+}
+
+.custom-input > input,
+.custom-input > textarea,
+.custom-input .anticon svg,
+.custom-input .ant-input-number-input,
+.custom-search-input .ant-input-group > .ant-input,
+.custom-select .ant-select-selection-placeholder {
+  @apply text-white placeholder:text-white;
+}
+
+.custom-input .ant-input-number {
+  @apply !w-full;
+}
+
+.tel-input {
+  @apply placeholder:text-white text-white transition-all bg-[#24262d] w-full focus:bg-transparent hover:bg-transparent py-[10px] !important;
+}
+
+.disabled:disabled {
+  @apply bg-gray-400 !important;
+}
+
+:where(.css-dev-only-do-not-override-240cud).ant-steps
+  .ant-steps-item-wait
+  .ant-steps-item-icon {
+  background-color: grey;
+}
+
+.custom-breadcurmbs .ant-breadcrumb-link a,
+.custom-breadcurmbs .ant-breadcrumb-separator {
+  @apply text-white;
+}
+
+.custom-input::-webkit-outer-spin-button,
+.custom-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-input {
+  -moz-appearance: textfield; /* Firefox ke liye */
+}
+
+.add-product
+  .ant-steps
+  .ant-steps-item-wait
+  > .ant-steps-item-container
+  > .ant-steps-item-content
+  > .ant-steps-item-title {
+  @apply text-gray-400 !important;
+}
+
+.add-product .ant-steps .ant-steps-item-wait .ant-steps-item-icon {
+  @apply bg-[#767676] text-black !important;
+}
+
+.custom-pagination .ant-select-dropdown {
+  background-color: #24262d !important;
+}
+
+.custom-pagination .ant-pagination .ant-pagination-item-link {
+  color: white !important;
+}
+
+.product-status .ant-select-dropdown {
+  @apply bg-[#ffffff0d] !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.ant-rate {
+  @apply bg-[#24262d] text-[25px] px-2 py-2 rounded-sm;
+}
+
+.ant-otp .ant-otp-input {
+  @apply bg-transparent !important;
+}
+
+.custom-table .ant-table {
+  @apply bg-[#1a1c23] !important;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background-color: #6c2bd9 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #24262d !important;
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #24262d !important;
+}
+
+.custom-table .ant-table-row > .ant-table-cell-row-hover {
+  @apply bg-[#24262d] !important;
+}
